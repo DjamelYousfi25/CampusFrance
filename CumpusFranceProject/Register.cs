@@ -27,7 +27,7 @@ namespace CumpusFranceProject
         public void FillFormHomme()
 
         {
-            Console.WriteLine("ddddddddddddddddd");
+            Console.WriteLine("begin FillFormHomme");
             js = (IJavaScriptExecutor)driver;
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
