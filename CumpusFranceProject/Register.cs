@@ -66,7 +66,7 @@ namespace CumpusFranceProject
         public void FillFormFemme()
 
         {
-
+            Console.WriteLine("begin FillFormFemme");
             js = (IJavaScriptExecutor)driver;
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
