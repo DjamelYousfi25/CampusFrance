@@ -32,7 +32,7 @@ namespace CumpusFranceProject
             driver.Navigate().GoToUrl(url);
             driver.Manage().Window.Maximize();
             System.Threading.Thread.Sleep(3000);
-            driver.FindElement(By.Id("tarteaucitronPersonalize2")).Click();
+            driver.FindElement(By.Id("tarteaucitronPersonalize222")).Click();
             driver.FindElement(By.XPath("//form/div[2]/div/div[1]/input")).SendKeys("dfdfdf");
             driver.FindElement(By.Id("edit-pass-pass1")).SendKeys("CoCo12358@");
             driver.FindElement(By.Id("edit-pass-pass2")).SendKeys("CoCo12358@");
