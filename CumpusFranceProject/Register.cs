@@ -1,6 +1,6 @@
 ﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
@@ -17,16 +17,21 @@ namespace CumpusFranceProject
     [TestFixture]
     public class Register
     {
+       
 
         public IWebDriver driver;
         IJavaScriptExecutor js;
         string url="https://www.campusfrance.org/en/user/register";
         WebDriverWait w;
-
+     
         [Test]
         public void FillFormHomme()
 
         {
+            bool testResult = true;
+            string resultsDirectory = TestContext.CurrentContext.WorkDirectory;
+            string resultFilePath = Path.Combine(resultsDirectory, "TestResults.txt");
+
             Console.WriteLine("begin FillFormHomme");
             js = (IJavaScriptExecutor)driver;
             driver.Navigate().GoToUrl(url);
@@ -60,6 +65,7 @@ namespace CumpusFranceProject
             //selectionner le niveau 
             driver.FindElement(By.XPath("//*[@id=\"edit-field-niveaux-etude-wrapper\"]/div/div/div[2]/div/div[@data-value='69']")).Click();
             driver.FindElement(By.XPath("//form/div[4]/div[4]/div/label")).Click();
+            WriteXMLResult writer = new WriteXMLResult("FillFormHomme", true);
 
         }
         [Test]
@@ -99,7 +105,7 @@ namespace CumpusFranceProject
             //selectionner le niveau 
             driver.FindElement(By.XPath("//*[@id=\"edit-field-niveaux-etude-wrapper\"]/div/div/div[2]/div/div[@data-value='69']")).Click();
             driver.FindElement(By.XPath("//form/div[4]/div[4]/div/label")).Click();
-
+            NUnit.Framework.Assert.Pass();
         }
 
         [TearDown]

@@ -26,10 +26,12 @@ pipeline {
          stage('Run') {
             steps {
             
-                bat '"C:\\Program Files\\dotnet\\dotnet.exe" test C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\CumpusFranceProject\\bin\\Debug\\CumpusFranceProject.dll -c:Debug' // Utilisation de 'bat' pour exécuter des commandes Windows
+                bat '"C:\\Program Files\\dotnet\\dotnet.exe" test --logger "trx;LogFileName=Test1Results.trx" C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\CumpusFranceProject\\bin\\Debug\\CumpusFranceProject.dll -c:Debug' // Utilisation de 'bat' pour exécuter des commandes Windows
                
 
             }
+			
+			
         }
     }
 }
