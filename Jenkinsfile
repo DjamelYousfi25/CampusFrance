@@ -35,4 +35,10 @@ pipeline {
 			
         }
     }
+	 post {
+        always {
+            // Publier les résultats des tests NUnit
+            junit '"C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\TestResults\\TestResults.xml"'
+        }
+    }
 }
