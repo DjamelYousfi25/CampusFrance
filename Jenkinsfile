@@ -26,7 +26,8 @@ pipeline {
          stage('Run') {
             steps {
             
-                bat '"C:\\Program Files\\dotnet\\dotnet.exe" test --logger "trx;LogFileName=Test1Results.trx" C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\CumpusFranceProject\\bin\\Debug\\CumpusFranceProject.dll -c:Debug' // Utilisation de 'bat' pour exécuter des commandes Windows
+                bat 'nunit3-console.exe "C:\Users\y_dja\source\repos\CumpusFranceProject\CumpusFranceProject\bin\Debug\CumpusFranceProject.dll" --result=C:\Users\y_dja\source\repos\CumpusFranceProject\TestResults\TestResults.xml;format=nunit2' 
+				// Utilisation de 'bat' pour exécuter des commandes Windows
                
 
             }
