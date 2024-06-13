@@ -66,6 +66,7 @@ namespace CumpusFranceProject
             driver.FindElement(By.XPath("//*[@id=\"edit-field-niveaux-etude-wrapper\"]/div/div/div[2]/div/div[@data-value='69']")).Click();
             driver.FindElement(By.XPath("//form/div[4]/div[4]/div/label")).Click();
             WriteXMLResult writer = new WriteXMLResult("FillFormHomme", true);
+            Console.WriteLine("End of FillFormHomme");
 
         }
         [Test]
@@ -106,6 +107,7 @@ namespace CumpusFranceProject
             driver.FindElement(By.XPath("//*[@id=\"edit-field-niveaux-etude-wrapper\"]/div/div/div[2]/div/div[@data-value='69']")).Click();
             driver.FindElement(By.XPath("//form/div[4]/div[4]/div/label")).Click();
             NUnit.Framework.Assert.Pass();
+            Console.WriteLine("End of FillFormFemme");
         }
 
         [TearDown]
