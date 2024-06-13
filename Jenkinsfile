@@ -26,7 +26,7 @@ pipeline {
          stage('Run') {
             steps {
             
-                bat 'C:\\Users\\y_dja\\.nuget\\packages\\nunit.consolerunner\\3.17.0\\tools\\nunit3-console.exe "C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\CumpusFranceProject\\bin\\Debug\\CumpusFranceProject.dll" --result=C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\TestResults\\TestResults.xml;format=nunit2    ' 
+                bat '"C:\\Program Files\\dotnet\\dotnet.exe" test "C:\\Users\\y_dja\\source\\repos\\CumpusFranceProject\\CumpusFranceProject\\bin\\Debug\\CumpusFranceProject.dll"' 
 				// Utilisation de 'bat' pour exécuter des commandes Windows
                
 
