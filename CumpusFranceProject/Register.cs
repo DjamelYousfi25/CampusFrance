@@ -105,8 +105,9 @@ namespace CumpusFranceProject
             //selectionner le niveau 
             driver.FindElement(By.XPath("//*[@id=\"edit-field-niveaux-etude-wrapper\"]/div/div/div[2]/div/div[@data-value='69']")).Click();
             driver.FindElement(By.XPath("//form/div[4]/div[4]/div/label")).Click();
-            NUnit.Framework.Assert.Pass();
             Console.WriteLine("End of FillFormFemme");
+            NUnit.Framework.Assert.Pass();
+    
         }
 
         [TearDown]
