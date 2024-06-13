@@ -35,10 +35,5 @@ pipeline {
 			
         }
     }
-	 post {
-        always {
-            // Publier les résultats des tests NUnit
-          nunit testResultsPattern: 'TestResults.xml'
-        }
-    }
+	
 }
